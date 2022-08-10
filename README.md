@@ -1,15 +1,48 @@
-# Basic Sample Hardhat Project
+# Binance Crypto Wallet + NFT
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+## Setting Up :
 
-Try running some of the following tasks:
+**Step 1:** Download the repository using the command:
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
 ```
+ git clone -b wallet_nft "https://github.com/Arjun-Pradeep/safeCryptoWallet.git"
+```
+
+**Step 2:** Change the current working directory to "safeCryptoWallet" :
+
+```
+ cd safeCryptoWallet
+```
+
+**Step 3:** Install the dependecies :
+
+```
+ npm i --save
+```
+
+**Step 4:** Load environment variables from **.env** file
+
+```
+PRIVATE_KEY=""
+PROVIDER=""
+EXPLORER_API_KEY=""
+```
+
+**Step 5:** Compile the smart contracts :
+
+```
+ npx hardhat compile
+```
+
+**Step 5:** Deploy the smart contracts :
+
+```
+ npx hardhat run scripts/scripts --network testnet
+```
+
+**Step 6:** Verify the smart contracts :
+
+```
+ npx hardhat verify {CONTRACT_ADDRESS} --contract {CONTRACT_FILE_PATH:CONTRACT_NAME} --network testnet
+```
+
